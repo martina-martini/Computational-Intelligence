@@ -40,7 +40,7 @@ def give_reward(state, player1, player2, action, game):
 
 def train(player1, player2, matches, q_table_file):
     wins = {player1: 0, player2: 0}
-
+    
     for _ in tqdm(range(matches), desc='Training Progress'):
         quixo_game = Game()
         trajectory = []
@@ -248,7 +248,7 @@ if __name__ == "__main__":
     print("playing games ...")
     for player1_ in players1:
         for player2_ in players2:
-            # if player1_.__class__.__name__ != player2_.__class__.__name__:
+            if player1_.__class__.__name__ != player2_.__class__.__name__:
                 player1_name, player1_symbol, win_percentage_player1, player2_name, player2_symbol, win_percentage_player2 = play_game(player1_, player2_, matches=100)
                 game_results.append({
                     'Player 1 Name': player1_name,
