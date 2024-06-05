@@ -145,7 +145,7 @@ def plot(df):
     plt.figure(figsize=(14, 6))
     sns.set(style="whitegrid")
     barplot = sns.barplot(x='Player 1 Name', y='Player 1 Win Percentage', hue='Player 2 Name', data=df, palette='viridis')
-    plt.title('Player 1 Win Percentages During Training')
+    plt.title('Player 1 Win Percentages')
     plt.ylim(0, 110)
     plt.ylabel('Win Percentage (%)')
     plt.xlabel('Player 1 Name (symbol 0)')
